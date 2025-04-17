@@ -56,3 +56,20 @@ hashmap.c:53:71: error: comparison between pointer and integer [-Werror]
                                                                        ^~
 cc1.exe: all warnings being treated as errors
 b759326
+Thu, Apr 17, 2025  2:53:39 PM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:49:60: error: comparison between pointer and integer [-Werror]
+     if(map->buckets[pos] == NULL || map->buckets[pos]->key == POSNULA){
+                                                            ^~
+hashmap.c:52:9: error: statement with no effect [-Werror=unused-value]
+         for(pos; pos < map->capacity; pos++){
+         ^~~
+hashmap.c:53:71: error: comparison between pointer and integer [-Werror]
+             if(map->buckets[pos + 1] == NULL || map->buckets[pos + 1] == POSNULA){
+                                                                       ^~
+cc1.exe: all warnings being treated as errors
+f01fd07
