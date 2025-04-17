@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         map->buckets[pos] = dato;
     }else {
         for(pos; pos < map->capacity; pos++){
-            if(map->buckets[pos + 1] == NULL || map->buckets[pos + 1] == POSNULA){
+            if(map->buckets[pos + 1] == NULL || map->buckets[pos + 1]->key == POSNULA){
                 map->buckets[pos + 1] = dato;
                 break;
             }            
