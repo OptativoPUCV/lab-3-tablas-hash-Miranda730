@@ -46,12 +46,12 @@ void insertMap(HashMap * map, char * key, void * value) {
     dato->key = key;
     dato->value = value;
     
-    if(map->buckets[pos] == NULL || map->buckets[pos]->value == POSNULA){
+    if(map->buckets[pos] == NULL || map->buckets[pos]->key == NULL){
         map->buckets[pos] = dato;
     }else {
-        for(pos; pos < map->capacity; pos++){
-            if(map->buckets[pos + 1] == NULL || map->buckets[pos + 1]->value == POSNULA){
-                map->buckets[pos + 1] = dato;
+        for(int j = 0; pos < map->capacity; pos++){
+            if(map->buckets[j] == NULL || map->buckets[j]->key == NULL){
+                map->buckets[j] = dato;
                 break;
             }            
         }

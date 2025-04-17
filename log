@@ -107,3 +107,9 @@ hashmap.c:53:78: error: comparison between pointer and integer [-Werror]
                                                                               ^~
 cc1.exe: all warnings being treated as errors
 1b76d72
+Thu, Apr 17, 2025  3:15:00 PM: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  2|5
+total_score: 20/70
+8b3785d
