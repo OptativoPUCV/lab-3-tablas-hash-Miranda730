@@ -30,7 +30,7 @@ long hash( char * key, long capacity) {
     for (ptr = key; *ptr != '\0'; ptr++) {
         hash += hash*32 + tolower(*ptr);
     }
-    return hash%capacity;
+    return hash;
 }
 
 int is_equal(void* key1, void* key2){
