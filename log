@@ -27,3 +27,9 @@ hashmap.c:57:14: error: assignment from incompatible pointer type [-Werror=incom
               ^
 cc1.exe: all warnings being treated as errors
 8e945f6
+Thu, Apr 17, 2025 12:11:34 PM: 
+ hashmap.c | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+ tests:  1|5
+total_score: 10/70
+bfcbd8c
