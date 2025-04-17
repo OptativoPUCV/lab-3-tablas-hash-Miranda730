@@ -4,6 +4,7 @@
 #include <math.h>
 #include <ctype.h>
 #include "hashmap.h"
+#define POSNULA -1
 
 
 typedef struct HashMap HashMap;
@@ -52,8 +53,18 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
+HashMap *map = (HashMap*)malloc(sizeof(HashMap));
+map->buckets = (Pair*)calloc(capacity, sizeof(Pair));
 
+if(map->buckets == NULL){
+    free(map);
     return NULL;
+}
+map->capacity = capacity;
+map->size = 0;
+map->current = POSNULA;
+
+    return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
