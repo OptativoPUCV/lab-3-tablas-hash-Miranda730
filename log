@@ -33,3 +33,26 @@ Thu, Apr 17, 2025 12:11:34 PM:
  tests:  1|5
 total_score: 10/70
 bfcbd8c
+Thu, Apr 17, 2025  2:51:27 PM: 
+ hashmap.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:44:25: error: passing argument 2 of 'hash' makes integer from pointer without a cast [-Werror=int-conversion]
+     int pos = hash(key, value);
+                         ^~~~~
+hashmap.c:27:6: note: expected 'long int' but argument is of type 'void *'
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:49:60: error: comparison between pointer and integer [-Werror]
+     if(map->buckets[pos] == NULL || map->buckets[pos]->key == POSNULA){
+                                                            ^~
+hashmap.c:52:9: error: statement with no effect [-Werror=unused-value]
+         for(pos; pos < map->capacity; pos++){
+         ^~~
+hashmap.c:53:71: error: comparison between pointer and integer [-Werror]
+             if(map->buckets[pos + 1] == NULL || map->buckets[pos + 1] == POSNULA){
+                                                                       ^~
+cc1.exe: all warnings being treated as errors
+b759326
