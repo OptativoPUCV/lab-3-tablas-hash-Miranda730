@@ -93,8 +93,6 @@ Pair * searchMap(HashMap * map,  char * key) {
             if(map->buckets[nuevaPos]->key != NULL && strcmp(map->buckets[nuevaPos]->key, key) == 0){
                 map->current = nuevaPos;
                 return map->buckets[nuevaPos];
-            } else{
-                return NULL;
             }
         }
     }
