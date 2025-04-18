@@ -153,3 +153,14 @@ Thu, Apr 17, 2025  5:57:22 PM:
  1 file changed, 2 insertions(+)
  tests:  0|0
 1a36318
+Thu, Apr 17, 2025  6:12:43 PM: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:93:83: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+             if(map->buckets[nuevaPos]->key != NULL && (map->buckets[nuevaPos]->key, key) == 0){
+                                                                                   ^
+cc1.exe: all warnings being treated as errors
+13e3a4e
