@@ -112,6 +112,11 @@ Pair * firstMap(HashMap * map){
 }
 
 Pair * nextMap(HashMap * map) {
-
+    long pos = (map->current + 1) % map->capacity;
+    while(0){
+       if(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
+        return map->buckets[pos];
+       }
+    }
     return NULL;
 }
