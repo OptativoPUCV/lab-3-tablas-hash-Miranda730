@@ -90,6 +90,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     } else {
         for(long j = 0 ; j < map->capacity ; j++){
             long nuevaPos =(pos + j) % map->capacity;
+            if(map->buckets[nuevaPos] == NULL)return NULL;
             if(map->buckets[nuevaPos]->key != NULL && strcmp(map->buckets[nuevaPos]->key, key) == 0){
                 map->current = nuevaPos;
                 return map->buckets[nuevaPos];
