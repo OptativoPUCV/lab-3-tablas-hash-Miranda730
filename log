@@ -199,3 +199,17 @@ Thu, Apr 17, 2025  6:39:36 PM:
  tests:  9|3
 total_score: 40/70
 3150b7c
+Thu, Apr 17, 2025  6:45:05 PM: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:82:41: error: 'return' with a value, in function returning void [-Werror]
+     if(map->buckets[pos] == NULL)return NULL;
+                                         ^~~~
+hashmap.c:80:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+387b4d3
